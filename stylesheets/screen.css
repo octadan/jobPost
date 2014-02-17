@@ -1,0 +1,437 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* CSS3 animation */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+
+@font-face {
+  font-family: 'Ostrich Sans';
+  src: url("../fonts/ostrich-black.eot");
+  src: local("?"), url("../fonts/ostrich-black.woff") format("woff"), url("../fonts/ostrich-black.ttf") format("truetype"), url("../fonts/ostrich-black.svg") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ostrich Sans';
+  src: url("../fonts/ostrich-bold.eot");
+  src: local("?"), url("../fonts/ostrich-bold.woff") format("woff"), url("../fonts/ostrich-bold.ttf") format("truetype"), url("../fonts/ostrich-bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* here are all the base styles */
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.2;
+}
+
+a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: #107caf;
+  text-decoration: none;
+}
+
+h1:focus, h2:focus, p:focus, span:focus, a:focus {
+  outline: none;
+}
+
+div {
+  width: 780px;
+  margin: 0 auto;
+}
+
+header {
+  height: 90px;
+  background-color: #ffe327;
+  box-shadow: -40rem 0 0 #ffe327, 40rem 0 0 #ffe327;
+  margin-bottom: 70px;
+  position: relative;
+}
+header h1 {
+  font-family: "Ostrich Sans", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  position: absolute;
+  bottom: 20px;
+  line-height: 0.7;
+  color: #333333;
+}
+header #createJob {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333333;
+  border: 1px solid #fff38d;
+  background: #ffe327;
+  padding: 17px;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+header #createJob:hover {
+  background-color: #ffffff;
+}
+header .arrow {
+  display: none;
+}
+header .show {
+  position: absolute;
+  top: 120px;
+  font-size: 16px;
+  display: inherit;
+  padding: 5px;
+  color: #333333;
+  background-color: #f4f4f4;
+  text-transform: uppercase;
+  -webkit-transition-property: margin-left;
+  -moz-transition-property: margin-left;
+  -o-transition-property: margin-left;
+  transition-property: margin-left;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+header .show:hover {
+  margin-left: -7px;
+}
+
+.singlePost {
+  border-top: 1px solid #cacaca;
+  padding-bottom: 20px;
+  position: relative;
+  -webkit-transition-property: border-top;
+  -moz-transition-property: border-top;
+  -o-transition-property: border-top;
+  transition-property: border-top;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.singlePost:hover {
+  border-top: 5px solid #ffe327;
+  cursor: pointer;
+}
+.singlePost:hover h1 {
+  color: #96927a;
+}
+.singlePost div {
+  clear: both;
+  overflow: auto;
+}
+.singlePost div span:first-of-type {
+  float: left;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+  letter-spacing: 1px;
+}
+.singlePost div span:last-of-type {
+  float: right;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+  letter-spacing: 1px;
+}
+.singlePost div span:last-of-type time {
+  color: #333333;
+}
+.singlePost h1 {
+  font-family: "Ostrich Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.singlePost span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+  letter-spacing: 1px;
+}
+.singlePost h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #96927a;
+}
+
+#fullViewPost, #createPost {
+  padding-bottom: 20px;
+  position: relative;
+}
+#fullViewPost div, #createPost div {
+  clear: both;
+  overflow: auto;
+}
+#fullViewPost div span:first-of-type, #createPost div span:first-of-type {
+  float: left;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+  letter-spacing: 1px;
+}
+#fullViewPost div span:last-of-type, #createPost div span:last-of-type {
+  float: right;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+  letter-spacing: 1px;
+}
+#fullViewPost div span:last-of-type time, #createPost div span:last-of-type time {
+  color: #333333;
+}
+#fullViewPost h1, #createPost h1 {
+  font-family: "Ostrich Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+#fullViewPost span, #createPost span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: block;
+  letter-spacing: 1px;
+}
+#fullViewPost h2, #createPost h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #96927a;
+}
+#fullViewPost a, #createPost a {
+  display: block;
+}
+
+#createPost h1, #createPost h2, #createPost a[contenteditable], #createPost p[contenteditable] {
+  background-color: #f4f4f4;
+}
+#createPost h1:focus, #createPost h2:focus, #createPost a[contenteditable]:focus, #createPost p[contenteditable]:focus {
+  background-color: #ffffff;
+}
+
+div#post {
+  margin-top: 40px;
+}
+div#post a {
+  display: block;
+  width: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #333333;
+  border: 1px solid #fff38d;
+  background: #ffe327;
+  padding: 17px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+div#post a:hover {
+  background-color: #f4f4f4;
+}

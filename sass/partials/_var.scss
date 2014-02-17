@@ -1,0 +1,29 @@
+
+//main colors
+
+$yellow : #ffe327;
+$darkGrey : #333333;
+$darkYellow : #96927a;
+$black : #000000;
+$blue : #107caf;
+
+//font families
+$source : 'Source Sans Pro', sans-serif;
+
+//mixins
+
+@mixin bkg_border($borderColor, $bkgColor) {
+	border : 1px solid $borderColor;
+	background: $bkgColor;
+}
+
+@mixin span {
+	font-family: $source;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $darkGrey;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	display: block;
+	letter-spacing: 1px;
+}

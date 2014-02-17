@@ -1,0 +1,205 @@
+/* here are all the base styles */
+
+//global styles
+
+p {
+	font-family: $source;
+	font-size: 16px;
+	color: $darkGrey;
+	line-height: 1.2;
+}
+
+a {
+	font-family: $source;
+	font-size: 16px;
+	color: $blue;
+	text-decoration: none;	
+}
+
+h1:focus, h2:focus, p:focus, span:focus, a:focus {
+	outline: none;
+}
+
+div {
+	width: 780px;
+	margin: 0 auto;
+}
+
+
+//layout
+
+header {
+	height: 90px;
+	background-color: $yellow;
+	box-shadow: -40rem 0 0 $yellow, 40rem 0 0 $yellow;
+	margin-bottom: 70px;
+	position: relative;
+	h1 {
+		font-family: "Ostrich Sans", sans-serif;
+		font-weight: 700;
+		font-size: 60px;
+		position: absolute;
+		bottom: 20px;
+		line-height: 0.7;
+		color: $darkGrey;
+	}	
+	#createJob {
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 20px;
+		text-transform: uppercase;
+		font-family: $source;
+		font-size: 18px;
+		text-decoration: none;
+		color: $darkGrey;
+		@include bkg_border(#fff38d, $yellow);
+		padding: 17px;
+		@include border-radius(4px, 4px);
+		@include transition-property(background-color);
+		@include transition-duration(1s);
+		&:hover {
+			background-color: #ffffff;
+		} 
+	}
+	.arrow {
+		display: none;
+	}
+	.show {
+		position: absolute;
+		top: 120px;
+		font-size: 16px;
+		display: inherit;
+		padding: 5px;
+		color: $darkGrey;
+		background-color: #f4f4f4;
+		text-transform: uppercase;
+		@include transition-property(margin-left);
+		@include transition-duration(0.2s);		
+		&:hover {
+			margin-left: -7px;
+		}				
+	}
+}
+
+.singlePost {
+	border-top: 1px solid #cacaca;
+	padding-bottom: 20px;
+	position: relative;
+	@include transition-property(border-top);
+	@include transition-duration(0.5s);
+	&:hover {
+		border-top: 5px solid $yellow;
+		cursor: pointer;
+		h1{
+			color: $darkYellow;
+		}
+	} 	
+	div {
+		clear: both;
+		overflow: auto;
+		span:first-of-type {
+			float: left;
+			@include span;
+		}
+		span:last-of-type {
+			float: right;
+			@include span;
+			time {
+				color: $darkGrey;
+			}
+		}
+	}
+	h1 {
+		font-family: "Ostrich Sans", sans-serif;
+		font-size: 48px;
+		font-weight: 900;
+		margin-bottom: 10px;
+		@include transition-property(color);
+		@include transition-duration(0.5s);	
+	}
+	span {
+		@include span;
+	}
+	h2 {
+		font-family: $source;
+		font-size: 21px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $darkYellow;
+	}
+}
+
+#fullViewPost, #createPost {
+	padding-bottom: 20px;
+	position: relative;
+	div {
+		clear: both;
+		overflow: auto;
+		span:first-of-type {
+			float: left;
+			@include span;
+		}
+		span:last-of-type {
+			float: right;
+			@include span;
+			time {
+				color: $darkGrey;
+			}
+		}
+	}
+	h1 {
+		font-family: "Ostrich Sans", sans-serif;
+		font-size: 48px;
+		font-weight: 900;
+		margin-bottom: 10px;
+		@include transition-property(color);
+		@include transition-duration(0.5s);	
+	}
+	span {
+		@include span;
+	}
+	h2 {
+		font-family: $source;
+		font-size: 21px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $darkYellow;
+	}
+	a {
+		display: block;
+	}	
+}
+
+#createPost h1, #createPost h2, #createPost a[contenteditable], #createPost p[contenteditable] {
+	background-color: #f4f4f4;
+	&:focus {
+		background-color: #ffffff;
+	}
+}
+
+div#post {
+	margin-top: 40px;
+	a {
+		display: block;
+		width: 100px;
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $source;
+		font-size: 24px;
+		text-decoration: none;
+		color: $darkGrey;
+		@include bkg_border(#fff38d, $yellow);
+		padding: 17px;
+		@include transition-property(background-color);
+		@include transition-duration(1s);
+		&:hover {
+			background-color: #f4f4f4;
+		} 
+	}
+}
+
+
+
+
+

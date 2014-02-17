@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	  <meta charset="utf-8">
+	  <title>Job posting</title>
+	  <meta name="description" content="">
+	  <meta name="author" content="">
+	  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+	  <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	  <script src="js/jquery.js" charset="utf-8"></script>
+	  <script src="js/underscore.js" charset="utf-8"></script>	  
+	  <script src="js/backbone.js" charset="utf-8"></script>	  
+	  <!--[if lt IE 9]>
+	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	  <![endif]-->
+</head>
+<body>
+	<div>
+		<header>
+			<a href="#mainView"><h1>Job Post</h1></a>
+			<a id="createJob" href="#createPost">Create a new job post</a>
+			<a class='arrow' href='#mainView'>&larr; Back</a>
+		</header>
+		<main>
+		</main>
+	</div>
+	<script type="text/template" id="tplPost">
+				<div>
+					<span>Job title</span>
+					<span>Posted on: <time><%= date %></time></span>
+				</div>
+				<h1><%= jobTitle %></h1>
+				<span>Company name</span>
+				<h2><%= companyName %></h2>
+	</script>
+	<script type="text/template" id="tplPostFull">
+				<div>
+					<span>Job title</span>
+					<span>Posted on: <time><%= date %></time></span>
+				</div>
+				<h1><%= jobTitle %></h1>
+				<span >Company name</span>
+				<h2><%= companyName %></h2>
+				<span>Site</span>
+				<a href="<%= site %>"><%= site %></a>
+				<span>Description</span>
+				<p><%= description %></p>
+				<span>Requirements</span>
+				<p><%= requirements %></p>	
+				<span>Location</span>
+				<p><%= location %></p>
+				<span>Aboout Us</span>
+				<p><%= aboutUs %></p>
+				<span>Apply for this job</span>
+				<a href="<%= apply %>"><%= apply %></a>
+	</script>
+	<script type="text/template" id="createPost">
+				<div>
+					<span>Job title</span>
+					<span>Posted on: <time><%= date %></time></span>
+				</div>
+				<h1 id="jobTitle" contenteditable ></h1>
+				<span >Company name</span>
+				<h2 id="companyName" contenteditable></h2>
+				<span>Site</span>
+				<a id="site" contenteditable href=""></a>
+				<span>Description</span>
+				<p id="description" contenteditable ></p>
+				<span>Requirements</span>
+				<p id="requirements" contenteditable ></p>														
+				<span>Location</span>
+				<p id="location" contenteditable ></p>
+				<span>Aboout Us</span>
+				<p id="aboutUs" contenteditable></p>
+				<span>Apply for this job</span>
+				<a id="applyJob" contenteditable href=""></a>
+				<div id="post"><a href="#">Post</a></div>				
+	</script>			
+	<script src="js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
