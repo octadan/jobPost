@@ -1,7 +1,6 @@
 //no global scope
 (function(){
 
-	var eventAggregator = _.extend({}, Backbone.Events); 	
 	var Post = Backbone.Model.extend({
 		initialize: function(){
 			var d = (new Date()).toDateString().substring(3, 10);
@@ -72,7 +71,8 @@
 		},
 		events: {
 			"click" : function(){
-				eventAggregator.trigger('post:selected', this.model);
+				var urlPath = 'postView/' + this.model.get('jobTitle');
+				jobApp.navigate(urlPath, {trigger: true});				
 			}
 		}
 	});
@@ -139,12 +139,6 @@
 		
 	});
 	
-	
-	eventAggregator.on('post:selected', function(post){
-		var urlPath = 'postView/' + post.get('jobTitle');
-		jobApp.navigate(urlPath, {trigger: true});
-	})
-
 	var postsCollection = new PostCollection([
 	{jobTitle:"First"},
 	{jobTitle:"Second"},
