@@ -50,7 +50,8 @@
 				this.model.set('applyJob', applyJob);							
 														
 				if(!jobTitle){
-					$('#jobTitle').addClass("animated shake");
+					$('#jobTitle').toggleClass("animated shake");
+					
 				} else {
 					postsCollection.add(this.model, {at: 0});
 					jobApp.navigate("mainView", {trigger: true});
