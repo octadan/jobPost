@@ -1,7 +1,7 @@
 jobPost
 =======
 
-Try out of backbone.js
+Trying out backbone.js
 
 Technologies used:
 Backbone.js
